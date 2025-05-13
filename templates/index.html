@@ -1,22 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Simple Calculator</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
-</head>
-<body>
-    <div class="container">
-        <h2>Simple Calculator (v1 - Addition Only)</h2>
-        <form method="POST">
-            <input type="number" name="num1" step="any" required>
-            <label> + </label>
-            <input type="number" name="num2" step="any" required>
-            <button type="submit">Calculate</button>
-        </form>
-        {% if result is not none %}
-            <h3>Result: {{ result }}</h3>
-        {% endif %}
-    </div>
-</body>
-</html>
-
+<form method="POST">
+    <input type="number" name="num1" step="any" required>
+    <select name="operator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+    </select>
+    <input type="number" name="num2" step="any" required>
+    <button type="submit">Calculate</button>
+</form>
