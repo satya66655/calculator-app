@@ -1,3 +1,7 @@
+from flask import Flask, render_template, request
+
+app = Flask(__name__, static_folder='static', template_folder='templates')
+
 @app.route('/', methods=['GET', 'POST'])
 def calculator():
     result = None
@@ -19,6 +23,4 @@ def calculator():
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=80)
-
-print(f"DEBUG: operator = {operator}, num1 = {num1}, num2 = {num2}")
 
