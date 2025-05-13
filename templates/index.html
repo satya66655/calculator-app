@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Simple Calculator (v1 - Addition Only)</h2>
+        <form method="POST">
+            <input type="number" name="num1" step="any" required>
+            <label> + </label>
+            <input type="number" name="num2" step="any" required>
+            <button type="submit">Calculate</button>
+        </form>
+        {% if result is not none %}
+            <h3>Result: {{ result }}</h3>
+        {% endif %}
+    </div>
+</body>
+</html>
+
